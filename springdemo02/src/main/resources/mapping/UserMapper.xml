@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ctgu.springdemo02.dao.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.ctgu.springdemo02.pojo.User">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="userName" jdbcType="VARCHAR" property="userName" />
+        <result column="passWord" jdbcType="VARCHAR" property="passWord" />
+        <result column="realidentity" jdbcType="VARCHAR" property="realidentity" />
+    </resultMap>
+
+    <select id="Sel" resultType="com.ctgu.springdemo02.pojo.User">
+        select * from adminuser where id = #{id}
+    </select>
+
+    <!-- 新增-->
+    <insert id="insertUser" parameterType="com.ctgu.springdemo02.pojo.User" >
+    insert into adminuser (userName, passWord, realidentity)
+    values (#{userName,jdbcType=VARCHAR}, #{passWord,jdbcType=VARCHAR}, #{realidentity,jdbcType=VARCHAR})
+    </insert>
+
+
+    <!-- 查询-->
+    <select id="selectUser" resultType="com.ctgu.springdemo02.pojo.User">
+        select * from adminuser where userName = #{username} and passWord = #{password};
+    </select>
+</mapper>

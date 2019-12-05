@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <script  th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script  th:src="@{/js/jquery-1.8.3.js}"></script>
+    <script>
+
+        //登录
+        function jump() {
+            var username = document.getElementById("form-username").value;
+            var password = document.getElementById("form-password").value;
+            var obj = {
+                userName:username,
+                passWord:password,
+            }
+
+            $.ajax({
+                "url": "/testBoot/dologin",        //login是登录接口
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(obj),
+                success: function (result) {
+                    if (result == "1") {
+                        alert("登录成功");
+                        window.location.href="/testBoot/register";
+                    } else{
+                        alert("账号或密码不正确");
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    console.log('XMLHttpRequest:');
+                    console.log(XMLHttpRequest);
+                    alert('网络异常！尝试刷新网页解决问题')
+                }
+            });
+        }
+
+
+    </script>
+</head>
+用户名：<input type="text" placeholder="用户名" id="form-username">
+密码:<input type="password" placeholder="密码" id="form-password">
+<button onclick="jump()" class="btn" >登录</button>
+<a href="" th:href="@{/testBoot/register}">注册</a>
+<body>
+
+</body>
+</html>

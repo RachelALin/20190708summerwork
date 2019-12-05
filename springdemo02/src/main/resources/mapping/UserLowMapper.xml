@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ctgu.springdemo02.dao.UserLowMapper">
+
+    <resultMap id="BaseResultMap" type="com.ctgu.springdemo02.pojo.Category">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="sex" jdbcType="VARCHAR" property="sex" />
+        <result column="age" jdbcType="INTEGER" property="age" />
+    </resultMap>
+
+    <select id="getAll" resultMap="BaseResultMap">
+        select * from user
+    </select>
+
+    <select id="findname" resultMap="BaseResultMap" parameterType="java.lang.String">
+    	select * from user where username = #{username,jdbcType=VARCHAR}
+  	</select>
+
+    <!-- 删除用户 -->
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        DELETE FROM user WHERE id = #{id}
+    </delete>
+
+    <select id="FindId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    	select * from user where id = #{id}
+  	</select>
+
+    <update id="update" parameterType="com.ctgu.springdemo02.pojo.Category">
+        update user
+    set username = #{username,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER}
+    where Id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <insert id="Insert" >
+        insert into `user` (username,sex,age)values (#{username,jdbcType=VARCHAR},#{sex,jdbcType=VARCHAR},#{age,jdbcType=INTEGER})
+    </insert>
+</mapper>
