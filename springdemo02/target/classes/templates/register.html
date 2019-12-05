@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <script  th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script  th:src="@{/js/jquery-1.8.3.js}"></script>
+    <script>
+        //  注册
+        function reg() {
+            var username = document.getElementById("form-username").value;   //获取到前端输入的用户名
+            var password = document.getElementById("form-password").value;  //获取到前端输入的密码
+            var realidentity = document.getElementById("form-identity").value;
+            var obj = {
+                userName:username,
+                passWord:password,
+                realidentity:realidentity
+            }
+
+            $.ajax({
+                "url": "/testBoot/doregist",    //reg是注册接口
+                type:'POST',
+                dataType:'json',
+                contentType:'application/json',
+                data: JSON.stringify(obj),
+                success: function() {
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                console.log('XMLHttpRequest:');
+                console.log(XMLHttpRequest);
+                layer.alert('网络异常！尝试刷新网页解决问题')
+            }
+            });
+        }
+    </script>
+</head>
+<body>
+用户名：<input type="text" placeholder="用户名" id="form-username">
+密码:<input type="password" placeholder="密码" id="form-password">
+身份:<input type="text" placeholder="身份" id="form-identity">
+<button onclick="reg()" class="btn" >注册</button>
+</body>
+</html>

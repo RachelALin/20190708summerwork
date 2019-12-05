@@ -1,0 +1,323 @@
+body{
+	background-color:#EEF5F9;
+}
+.man{
+	margin-top: -10px;
+	font-weight: bold;
+}
+.men{
+	font-weight: bold;
+}
+.men span{
+	margin-left: 5px !important;
+}
+.input-b{
+	margin-left: 10px !important;
+	font-weight: bolder;
+	color: #181717;
+}
+img{
+	max-width: 100%;
+}
+h2{
+	text-align: center;
+	margin: 50px auto 30px;
+}
+.glyphicon{
+	color: #18951e
+}
+.container-small{
+	max-width: 500px;
+	margin: 0 auto;
+	margin-bottom: 70px;
+}
+.head
+{
+	height: 56px;
+	border-color: #e7e7e7;
+	background-color:#f8f8f8;
+	padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    position: relative;
+    border-radius: 0;
+    margin:0 auto!important;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+}
+.head-left{
+	float: left;
+	width: 50%;
+	color: black;
+	margin-top:-0.3%;
+}
+.head-left img
+{
+	width: 50%;
+}
+.head-right{
+	float: right;
+	margin-top: 0.1%;
+	margin-right: 2%;
+}
+.head-right-1
+{
+  font-size: 18px;
+  font-weight: 700;
+  padding-right: 10px;
+  text-decoration: none !important;
+  color: #0d3172;
+}
+.head-right-2
+{
+  font-size: 18px;
+  font-weight: 700;
+  padding-right: 5px;
+  text-decoration: none !important;
+  color: #0d3172;
+}
+.download{
+	width: 92%;
+	margin: 4em auto;
+	border: 1px solid rgba(0,0,0,.1);
+	background-color: white;
+}
+.download .header{
+	margin-top: 20px;
+	height: 65px;
+}
+#a1{
+	float: left;
+	margin-left: 1.5%;
+	padding: 0.5em;
+	width: 16em;
+	border: 1px solid #ccc;
+	color: #456;
+	background-color: #fff;
+}
+#a2
+{
+	float: left;
+	margin-left: 0.4%;
+}
+#a4
+{
+	float: left;
+	margin-left: 0.4%;
+}
+.bottom-right
+{
+	float:right;
+	margin-top:20px;
+	height: 50px;
+	width:100px;
+}
+.header-left
+{
+	float: left;
+	margin-left: 1.5%;
+	width: 100%;
+}
+.bottom-right a 
+{
+    margin-left: 1.1%;
+    margin-top: -10px;
+	float: left;
+}
+input{
+	padding: 0.5em;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+#a3{
+	float: right;
+	margin-right: 1.2%;
+}
+.sq-contain{
+	height: 30px;
+	float: left;
+	width: 123px;
+}
+.sq-contain3{
+	height: 30px;
+	float: left;
+	width: 123px;
+}
+.sq-contain-out{
+	width: 80%;
+}
+.excel{
+   text-decoration: none !important;
+   color: #0d3172;
+   font-weight: 700;
+}
+.download #b1{
+	float: left;
+	margin: 30px auto;
+	margin-bottom: 0px !important;
+	width: 100%;
+}
+#b1 th,#b1 td{
+	text-align: center;
+	padding: 0.6em;
+	border: 1px #333333b3 solid;
+}
+#add{
+	font-size: 1.2em;
+	margin: 20px auto;
+	width: 350px;
+	text-align: center;
+}
+#add input{
+	background-color: #fff;
+	height: 2em;
+	width: 15em;
+	padding: 0.2em;
+	margin-top: 0.5em;
+}
+#add .abc{
+	padding: 0.5em;
+	width: 8em;
+	height: auto;
+}
+ @media (max-width: 400px){
+	#b1{
+	   margin-left: -4px !important;
+	}
+	#a1{
+       width: 65%;
+	}
+	.head-left img{
+       width: 100%;
+	}
+}
+ @media (max-width: 420px){
+ 	.head-left img{
+       width: 100%;
+	}
+	 .bottom-right
+ {
+    float:left;
+    margin-left:9px;
+   padding-top:15px;
+ }
+	.head-right-1
+	{
+		font-size: 15.1px;
+	}
+	.head-right-2
+	{
+		font-size: 15.1px;
+	}
+ }
+ @media (max-width: 360px){
+	#b1{
+	   margin-left: -12px !important;
+	}
+}
+#a2:hover
+{
+	background-color: #0d3172;
+	color: white; 
+}
+#a3:hover
+{
+	background-color: #0d3172;
+	color: white; 
+}
+#a4:hover
+{
+	background-color: #0d3172;
+	color: white;
+}
+.sq-1{
+	width: 16px;
+	margin-left: 6.5%;
+	height: 16px;
+	background-color: yellow;
+	float: left;
+	margin-top: 2.6px;
+}
+.sq-1-behind{
+	float:right;
+	color:#0d3172;
+	font-weight: 750px;
+	width: 80px;
+
+}
+.sq-1-behind p
+{
+	font-weight: 600;
+}
+.sq-2{
+	float: left;
+	margin-left: 10px;
+	width: 16px;
+	height: 16px;
+	background-color:#68BC31;
+	margin-top: 2.6px;
+}
+.sq-3{
+	margin-left: 10px;
+	float: left;
+	width: 16px;
+	margin-top: 2.6px;
+	height: 16px;
+	background-color:#2091CF;
+}
+.k2
+{
+   margin-left:5px;
+}
+.c1{
+	float: left;
+}
+.c2{
+	float: right;
+}
+.box-body {
+    padding: 1.5rem 1.5rem;
+    flex: 1 1 auto;
+}
+.box-body > :last-child {
+    margin-bottom: 0;
+}
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+.mb-5 {
+    margin-bottom: 5px !important;
+}
+.table {
+    color: #757575;
+}
+.mb-5, .my-5 {
+    margin-bottom: 3rem !important;
+}
+.table {
+    width: 100% !important;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+.table {
+    color: #757575;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+ table tbody{
+	width: 100%;
+}
+tbody tr{
+	width: 100%;
+}
+.contain-right{
+	float: right;
+	margin-right: 2%;
+	margin-top: -45px;
+}

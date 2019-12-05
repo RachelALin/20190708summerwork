@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap-3.3.7/css/bootstrap.min.css}">
+    <script th:src="@{/bootstrap-3.3.7/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/csses/sale.css}">
+</head>
+<body>
+
+<div style="width:1000px;margin:40px auto;text-align: center" class="box-body">
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped table-responsive table-hover mb-5">
+        <tr>
+            <td>id</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>编辑</td>
+            <td>删除</td>
+        </tr>
+        <tr th:each="c:${page1.list}">
+            <td th:text="${c.id}"></td>
+            <td th:text="${c.username}"></td>
+            <td th:text="${c.sex}"></td>
+            <td th:text="${c.age}"></td>
+            <td><a th:href="@{/testBoot/editCategory(id=${c.id})}">编辑</a></td>
+            <td><a th:href="@{/testBoot/deleteCategory(id=${c.id})}">删除</a></td>
+
+        </tr>
+    </table>
+    <br/>
+    <div>
+        <a th:href="@{/testBoot/listCategory(start=0)}">[首  页]</a>
+        <a th:href="@{/testBoot/listCategory(start=${page.pageNum-1})}">[上一页]</a>
+        <a th:href="@{/testBoot/listCategory(start=${page.pageNum+1})}">[下一页]</a>
+        <a th:href="@{/testBoot/listCategory(start=${page.pages})}">[末  页]</a>
+    </div>
+    <br/>
+    <form action="/testBoot/findCategory" method="post" style="margin: auto;width: 284px;">
+        <h3 style="float: left;margin:0;">name:</h3><input name="username" style="float: left;height: 25px;"/><button type="submit" style="float: right;">提交</button>
+    </form>
+       <button type="submit" value="添加" ><a href="/testBoot/addCategory">添加</a></button>
+</div>
+</div>
+</body>
+</html>
