@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div style="margin:0px auto; width:500px">
+
+    <form action="/testBoot/updateCategory" method="post">
+
+        name: <input name="userName" th:value="${c.username}"/> <br/>
+        sex: <input name="sex" th:value="${c.sex}"/>
+        age: <input name="age" th:value="${c.age}"/>
+        <input name="id" type="hidden" th:value="${c.id}"/>
+        <button type="submit">提交</button>
+
+    </form>
+</div>
+</body>
+
+</html> 
